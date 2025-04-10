@@ -53,5 +53,8 @@ def new_potatoes():
                            uses="Best boiled or roasted with skins on, in salads, or as a fresh side dish.",
                            nutrition="Slightly higher moisture content, good source of vitamin C, potassium, and fiber.")
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
